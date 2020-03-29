@@ -28,7 +28,7 @@ jobs:
 
     #Build and publish the webapp to a folder
     - name: Publish
-      run: dotnet publish Source/ScienceNow.Website/ScienceNow.Website.csproj --configuration Release -o ./output/
+      run: dotnet publish */Website.csproj --configuration Release -o ./output/
 
     #Deploy to Azure webapp using Github profile configured in secrets
     - name: deploy to azure web app
