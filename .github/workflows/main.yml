@@ -35,5 +35,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with: 
         app-name: test-github-action-webapp
-        publish-profile: ${ { secrets.azureWebAppPublishProfile } }
+        publish-profile: ${{ secrets.azureWebAppPublishProfile }}
         package: ./output/
