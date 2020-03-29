@@ -28,12 +28,12 @@ jobs:
 
     #Build and publish the webapp to a folder
     - name: Publish
-      run: dotnet publish Source/Website/Website.csproj --configuration Release -o ./output/
+      run: dotnet publish source/Website/Website.csproj --configuration Release -o ./output/
 
     #Deploy to Azure webapp using Github profile configured in secrets
     - name: deploy to azure web app
       uses: azure/webapps-deploy@v2
       with: 
         app-name: test-github-action-webapp
-        publish-profile: ${{ secrets.azureWebAppPublishProfile }}  
+        publish-profile: ${ { secrets.azureWebAppPublishProfile } }
         package: ./output/
