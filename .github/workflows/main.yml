@@ -34,6 +34,6 @@ jobs:
     - name: deploy to azure web app
       uses: azure/webapps-deploy@v2
       with: 
-        app-name: test-github-action-webapp
+        app-name: aspnetcore-github-actions-publish-to-azure
         publish-profile: ${{ secrets.azureWebAppPublishProfile }}
         package: ./output/
